@@ -37,7 +37,7 @@ export function AuthButton() {
   }, [router, supabase]);
 
   const handleSignIn = async () => {
-    const redirectToUrl = `${location.origin}/auth/callback`;
+    const redirectToUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/auth/callback`;
     console.log("Client-side location.origin:", location.origin);
     console.log("Client-side redirectTo URL:", redirectToUrl);
 
